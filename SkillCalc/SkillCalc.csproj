@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B5C17EC-B2DC-49D9-8B08-FF41B22809B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkillCalc</RootNamespace>
+    <AssemblyName>SkillCalc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\sqlite-netFx45-binary-bundle-Win32-2012-1.0.96.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clickhandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowMessage.Designer.cs">
+      <DependentUpon>frmShowMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="professions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="sql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="toggleskills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tooltips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowMessage.resx">
+      <DependentUpon>frmShowMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabs-unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professions-listselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professions-background.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabs-selected.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-background.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-default.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-pointsback.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-pointsprogressbr.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professions-listunselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\headerCharacter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\headerSpecies.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\characterwindbttn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\characterwindbttn-selected.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-labelback.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-br.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decorbottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decortop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decormiddle.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-green.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-yellow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prof-points-actual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prof-points-actualmax.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prof-points-experimented.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prof-points-experimentmax.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-hover-default.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skill-hover-spent.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-tabs-blank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-tabs-selected.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-tabs-unselect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-shaded.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-shaded.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\program-br-nobug-nosum.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\program-br-bug-nosum.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-help.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
