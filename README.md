@@ -1,4 +1,4 @@
-SkillCalc Copyright (c) sstheno@gmail.com
+SkillCalc Copyright (c) 2015 sstheno@gmail.com
 
 This file is part of SkillCalc.
 
