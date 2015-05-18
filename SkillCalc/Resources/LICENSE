@@ -1,7 +1,6 @@
-﻿/*
 SkillCalc Copyright (c) sstheno@gmail.com
 
-This file is part of SkillCalc.
+These image files are part of SkillCalc.
 
     SkillCalc is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,27 +14,4 @@ This file is part of SkillCalc.
 
     You should have received a copy of the GNU General Public License
     along with SkillCalc.  If not, see <http://www.gnu.org/licenses/>.
-*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SkillCalc
-{
-    static class Program
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
-        }
-    }
-}
