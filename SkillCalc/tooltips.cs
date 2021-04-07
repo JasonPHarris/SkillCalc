@@ -30,7 +30,7 @@ namespace SkillCalc
         // One could extract the files from them and read those, but that will not work for later plans for this tool.
         // Need the ability to read from the base tre files much like Sytner's Editer does.
         // Alternatively, have a export to sqlite for all data from tre files, and read data that way.
-        // For now this is disabled. Enable by removing the return; in tooltipbox()
+ 
         private string tooltiptext(string sender)
         {
             switch (sender)
@@ -339,7 +339,7 @@ namespace SkillCalc
         }
         private void tooltipbox(string showstate, string sender)
         {
-            return;
+            if (showhelp == false) { return; }
             if (professions.Contains(selectedprof))
             {
                 switch (showstate)

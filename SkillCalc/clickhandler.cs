@@ -57,13 +57,14 @@ namespace SkillCalc
 
         private void pageBasic_Click(object sender, EventArgs e)
         {
-            cleartabs();
-            viewtab = "Basic";
-            this.pageBasic.Image = global::SkillCalc.Properties.Resources.tabs_selected;
-            this.pageBasic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
-            clearclicked();
-            clearpointsicon();
-            displayMenu(viewtab);
+            //cleartabs();
+            //viewtab = "Basic";
+            //this.pageBasic.Image = global::SkillCalc.Properties.Resources.tabs_selected;
+            //this.pageBasic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            //clearclicked();
+            //clearpointsicon();
+            //displayMenu(viewtab);
+            viewBasic();
         }
         private void pageAdvanced_Click(object sender, EventArgs e) { advanced(); }
         private void pageForce_Click(object sender, EventArgs e)
@@ -452,7 +453,7 @@ namespace SkillCalc
                 this.selectProf07.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Basic") { scout(); selectedprof = "Scout"; }
                 if (viewtab == "Advanced") { combatmedic(); selectedprof = "Combat Medic"; }
-                if (viewtab == "name") { handlenames(selectProf07.Text); calcpoints(selectProf07.Text); }
+                if (viewtab == "name") { handlenames(selectProf07.Text); calcpoints(selectProf07.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -465,7 +466,7 @@ namespace SkillCalc
                 this.selectProf08.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { commando(); selectedprof = "Commando"; }
                 if (viewtab == "Force") { forcedefense(); selectedprof = "Force Defense"; }
-                if (viewtab == "name") { handlenames(selectProf08.Text); calcpoints(selectProf08.Text); }
+                if (viewtab == "name") { handlenames(selectProf08.Text); calcpoints(selectProf08.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -478,7 +479,7 @@ namespace SkillCalc
                 this.selectProf09.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { creaturehandler(); selectedprof = "Creature Handler"; }
                 if (viewtab == "Force") { forceenhancement(); selectedprof = "Force Enhancement"; }
-                if (viewtab == "name") { handlenames(selectProf09.Text); calcpoints(selectProf09.Text); }
+                if (viewtab == "name") { handlenames(selectProf09.Text); calcpoints(selectProf09.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -491,7 +492,7 @@ namespace SkillCalc
                 this.selectProf10.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { dancer(); selectedprof = "Dancer"; }
                 if (viewtab == "Force") { forcehealing(); selectedprof = "Force Healing"; }
-                if (viewtab == "name") { handlenames(selectProf10.Text); calcpoints(selectProf10.Text); }
+                if (viewtab == "name") { handlenames(selectProf10.Text); calcpoints(selectProf10.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -504,7 +505,7 @@ namespace SkillCalc
                 this.selectProf11.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { doctor(); selectedprof = "Doctor"; }
                 if (viewtab == "Force") { lightsaber(); selectedprof = "Lightsaber"; }
-                if (viewtab == "name") { handlenames(selectProf11.Text); calcpoints(selectProf11.Text); }
+                if (viewtab == "name") { handlenames(selectProf11.Text); calcpoints(selectProf11.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -517,7 +518,7 @@ namespace SkillCalc
                 this.selectProf12.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { droidengineer(); selectedprof = "Droid Engineer"; }
                 if (viewtab == "Force") { forcepowers(); selectedprof = "Force Powers"; }
-                if (viewtab == "name") { handlenames(selectProf12.Text); calcpoints(selectProf12.Text); }
+                if (viewtab == "name") { handlenames(selectProf12.Text); calcpoints(selectProf12.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -529,7 +530,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf13.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { fencer(); selectedprof = "Fencer"; }
-                if (viewtab == "name") { handlenames(selectProf13.Text); calcpoints(selectProf13.Text); }
+                if (viewtab == "name") { handlenames(selectProf13.Text); calcpoints(selectProf13.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -541,7 +542,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf14.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { imagedesigner(); selectedprof = "Image Designer"; }
-                if (viewtab == "name") { handlenames(selectProf14.Text); calcpoints(selectProf14.Text); }
+                if (viewtab == "name") { handlenames(selectProf14.Text); calcpoints(selectProf14.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -553,7 +554,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf15.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { merchant(); selectedprof = "Merchant"; }
-                if (viewtab == "name") { handlenames(selectProf15.Text); calcpoints(selectProf15.Text); }
+                if (viewtab == "name") { handlenames(selectProf15.Text); calcpoints(selectProf15.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -565,7 +566,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf16.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { musician(); selectedprof = "Musician"; }
-                if (viewtab == "name") { handlenames(selectProf16.Text); calcpoints(selectProf16.Text); }
+                if (viewtab == "name") { handlenames(selectProf16.Text); calcpoints(selectProf16.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -577,7 +578,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf17.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { pikeman(); selectedprof = "Pikeman"; }
-                if (viewtab == "name") { handlenames(selectProf17.Text); calcpoints(selectProf17.Text); }
+                if (viewtab == "name") { handlenames(selectProf17.Text); calcpoints(selectProf17.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -589,7 +590,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf18.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { pistoleer(); selectedprof = "Pistoleer"; }
-                if (viewtab == "name") { handlenames(selectProf18.Text); calcpoints(selectProf18.Text); }
+                if (viewtab == "name") { handlenames(selectProf18.Text); calcpoints(selectProf18.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -601,7 +602,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf19.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { ranger(); selectedprof = "Ranger"; }
-                if (viewtab == "name") { handlenames(selectProf19.Text); calcpoints(selectProf19.Text); }
+                if (viewtab == "name") { handlenames(selectProf19.Text); calcpoints(selectProf19.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -613,7 +614,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf20.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { rifleman(); selectedprof = "Rifleman"; }
-                if (viewtab == "name") { handlenames(selectProf20.Text); calcpoints(selectProf20.Text); }
+                if (viewtab == "name") { handlenames(selectProf20.Text); calcpoints(selectProf20.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -625,7 +626,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf21.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { smuggler(); selectedprof = "Smuggler"; }
-                if (viewtab == "name") { handlenames(selectProf21.Text); calcpoints(selectProf21.Text); }
+                if (viewtab == "name") { handlenames(selectProf21.Text); calcpoints(selectProf21.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -637,7 +638,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf22.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { squadleader(); selectedprof = "Squad Leader"; }
-                if (viewtab == "name") { handlenames(selectProf22.Text); calcpoints(selectProf22.Text); }
+                if (viewtab == "name") { handlenames(selectProf22.Text); calcpoints(selectProf22.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -649,7 +650,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf23.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { swordsman(); selectedprof = "Swordsman"; }
-                if (viewtab == "name") { handlenames(selectProf23.Text); calcpoints(selectProf23.Text); }
+                if (viewtab == "name") { handlenames(selectProf23.Text); calcpoints(selectProf23.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -661,7 +662,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf24.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { tailor(); selectedprof = "Tailor"; }
-                if (viewtab == "name") { handlenames(selectProf24.Text); calcpoints(selectProf24.Text); }
+                if (viewtab == "name") { handlenames(selectProf24.Text); calcpoints(selectProf24.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -673,7 +674,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf25.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { teraskasiartist(); selectedprof = "Teras Kasi Artist"; }
-                if (viewtab == "name") { handlenames(selectProf25.Text); calcpoints(selectProf25.Text); }
+                if (viewtab == "name") { handlenames(selectProf25.Text); calcpoints(selectProf25.Text); viewBasic(); }
                 updateDisplay();
             }
         }
@@ -685,7 +686,7 @@ namespace SkillCalc
                 clearprofselect();
                 this.selectProf26.Image = global::SkillCalc.Properties.Resources.professions_listselect;
                 if (viewtab == "Advanced") { weaponsmith(); selectedprof = "Weaponsmith"; }
-                if (viewtab == "name") { handlenames(selectProf26.Text); calcpoints(selectProf26.Text); }
+                if (viewtab == "name") { handlenames(selectProf26.Text); calcpoints(selectProf26.Text); viewBasic(); }
                 updateDisplay();
             }
         }

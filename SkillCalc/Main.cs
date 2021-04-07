@@ -30,7 +30,7 @@ namespace SkillCalc
         public Main()
         {
             InitializeComponent();
-            this.labelversion.Text = "1.3";
+            this.labelversion.Text = "1.4";
             mouseHovering();
             checkFile();
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
@@ -3829,6 +3829,16 @@ namespace SkillCalc
                     }
                     break;
             }
+        }
+        private void viewBasic()
+        {
+            cleartabs();
+            viewtab = "Basic";
+            this.pageBasic.Image = global::SkillCalc.Properties.Resources.tabs_selected;
+            this.pageBasic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            clearclicked();
+            clearpointsicon();
+            displayMenu(viewtab);
         }
     }
 }
